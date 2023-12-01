@@ -1,0 +1,17 @@
+body {
+    background: #fff;
+    color: #333;
+    font-family: Lato, sans-serif;
+    background: #b2fefa;
+    background: -webkit-linear-gradient(to right, #0ED2F7, #B2FEFA);
+    background: linear-gradient(to right, #0ED2F7, #B2FEFA);
+}
+
+button {
+    background-color: aliceblue;
+}
+
+button:hover {
+    background-color: black;
+    color: aliceblue;
+}

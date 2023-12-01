@@ -6,8 +6,8 @@ app = Flask(__name__)
 def hello():
     return render_template("index.html")
 
-@app.route("/og")
+@app.route("/login")
 def greeting():
-    return "Hello World"
+    return render_template("login.html")
 
 app.run(debug=True)

@@ -68,7 +68,7 @@ let createNewTask = function(taskName) {
 let bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
     // select list items children
     let checkBox = taskListItem.querySelector('input[type="checkbox"]');
-    let editButton = taskListItem.querySelector("buttton.edit");
+    let editButton = taskListItem.querySelector("button.edit");
     let deleteButton = taskListItem.querySelector("button.delete");
     // bind editTask top edit button
     editButton.onclick = editTask;
@@ -81,7 +81,7 @@ let bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
 /* Edit Task */
 let editTask = function() {
     let listItem = this.parentNode;
-    let editButton = listItem.querySelector("input[type=text]");
+    let editInput = listItem.querySelector("input[type=text]");
     let label = listItem.querySelector("label");
     let containsClass = listItem.classList.contains("editMode");
 
@@ -89,7 +89,7 @@ let editTask = function() {
     if (containsClass) {
         // Switch from .editMode
         // input value becomes the label's value
-        editInput.value = label.innerText;
+        label.innerText = editInput.value;
     } else {
         // Switch to .editMode
         // input value becomes the label's text
